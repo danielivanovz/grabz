@@ -1,5 +1,5 @@
 {
-	"name": "iFrame Link Grabber",
+	"name": "Link Grabber",
 	"description": "A simple extension to grab links from iframes",
 	"version": "1.0",
 	"manifest_version": 3,

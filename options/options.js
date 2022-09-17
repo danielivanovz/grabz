@@ -11,18 +11,18 @@ const refs = {
   button: byId('button'),
 }
 
-refs.button.addEventListener("click", onSave);
+refs.button.addEventListener("click", () => onSave());
 
 onSave = () => storage(
   {
-    method: set,
+    method: 'set',
     key: Object.keys(refs.inputs).reduce((acc, key) => ({ ...acc, [key]: valueOf(refs.inputs[key]) }), {}),
     cb: logSaved(refs.inputs)
   }
 );
 
 onLoad = () => storage({
-  method: get,
+  method: 'get',
   key: Object.keys(refs.inputs),
   cb: (result) => {
     console.log("loaded", result);
